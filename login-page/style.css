@@ -1,0 +1,339 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+a {
+text-decoration: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+	background: transparent;
+	border: none;
+	outline: none;
+  cursor: pointer;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(to bottom, #f0f0f0, #f2d7d7);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 5rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    backdrop-filter: blur(10px); 
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0px;
+
+  .text-pair{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .logo {
+      font-family: "Lilita One", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+  }
+  .heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  }
+
+  .supporting-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        label {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            position: relative;
+            align-items: center;
+
+          svg:nth-of-type(1) {
+                position: absolute;
+                left: 10px;
+                width: 20px;
+                height: 20px;
+                object-fit: cover;
+            }
+
+            svg:nth-of-type(2) {
+                position: absolute;
+                right: 10px;
+                width: 20px;
+                height: 20px;
+                object-fit: cover;
+            }
+        }
+
+        input, button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 8px 40px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          height: 48px;
+          outline: none;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+      }
+
+      input:focus {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+      .submit-btn {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+        background: linear-gradient(90deg, #f86747, #fc7960, #ff8d7b);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: none;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+          font-weight: 700;
+        }
+
+      }
+
+      a {
+        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        color: #131212;
+      }
+
+      .singin-google {
+        display: flex;
+        gap: 8px;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        color: #131212;
+        font-size: 14px;
+        font-weight: 700;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 16px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+          font-weight: 700;
+        }
+
+        &:hover {
+          background: #f0f0f0;
+        }
+      
+      }
+    }
+
+    .signup {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #131212;
+      margin-top: 16px;
+    
+      a {
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #f86747;
+      }
+    }
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 809px;
+    height: 730px;
+    object-fit: cover;
+}
+
+.img-container svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (width <= 768px) {
+    .container {
+        margin-bottom: 6rem;
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin-left: 0;
+    }
+
+    .img-container {
+        display: none;
+    }
+}
+
+@media (width <=480px) {
+  .container {
+        padding: 16px;
+        margin-bottom: 0;
+  }
+    .form-container {
+        padding: 16px;
+    }
+}
